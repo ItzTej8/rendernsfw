@@ -38,6 +38,11 @@ export default async function nsfwClient(url) {
   else if (highestClass === 'Drawing' && secondHighestClass === 'Porn' || highestClass === 'Drawing' && secondHighestClass === 'Hentai' ||  highestClass === 'Drawing' && secondHighestClass === 'Sexy') {
     isSafe = false;
   }
+
+     else if (highestClass === 'Neutral' && secondHighestClass === 'Porn' && 0.6 <=  secondHighestPrediction.probability || highestClass === 'Neutral' && secondHighestClass === 'Hentai' && 0.6 <=  secondHighestPrediction.probability) {
+    isSafe = false;
+  }
+
   else
   {
     isSafe = true;
