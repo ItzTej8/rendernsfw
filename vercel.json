@@ -1,4 +1,7 @@
 {
+  {
+  "installCommand": "npm install"
+},
   "version": 2,
   "builds": [
     {
